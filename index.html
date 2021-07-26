@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlaySim 1</title>
+   
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body class=" container-fluid row justify-content-center ">
+    <div class="container w-75 mt-3 mb-2">
+        <button id="darkMode" class="btn-outline-dark float-end">Modo Dark</button>
+
+        <h1> Simulador Eventos</h1>
+        <p id="msg">  </p>
+    </div>
+    <div id="paquetes" class="container w-50  mb-2 ">
+        <div class="row">
+            <div class=" col m-1 bg-primary bg-gradient" >
+                <h5 class="card-title">Play Basic</h5>   
+                <p class="card-text">$400.00 por persona</p>  
+            </div>
+            <div class=" col   m-1 bg-warning bg-gradient" >
+                <h5 class="card-title">Play Gold</h5>   
+                <p class="card-text">$600.00 por persona</p>  
+            </div>
+            <div class=" col   m-1 bg-dark bg-gradient" >
+                <h5 class="card-title" style="color: white;">Play Black</h5>   
+                <p class="card-text" style="color: white;">$800.00 por persona</p>  
+            </div>
+        </div>    
+    </div>
+    <div  class=" w-75 shadow rounded mb-3 ">
+        <div  class="row align-items-stretch">
+            <div id="box1" class="col bg-light p-4 rounded">
+                <div class="text-end">
+                    <img
+                        src="./assets/logoPlay_pr.png"
+                        width="80"
+                        alt="logo contacto"
+                    />
+                </div>
+                <div class="form-check">
+                    <h2 class="text-center fw-bolder m-0">Contáctanos</h2>
+                    <input type="checkbox" class="form-check-input" id="check1">
+                    <label class="form-check-label fs-6" for="exampleCheck1">Mostrar Info Paquetes
+                    </label>
+                </div>
+                <p id="instrucciones" class="text-center instrucciones mt-2"></p>
+
+                <form action="#" id="formClientes">
+                    <div class="mb-4">
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="nombre"
+                            placeholder="Nombre Completo"
+                            
+                        />
+                        <div id="validacion">
+                          </div>
+                    </div>
+                    <div class="mb-4">
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="tipoEvento"
+                            placeholder="Tipo de Evento"
+                            
+                        />
+                        <div id="validacionE">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <select
+                        class="form-select"
+                        id="tipoServicio">
+                        <option selected>Tipo de Servicio</option>
+
+                        </select>
+                        <div id="validacion3">
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <input
+                            type="number"
+                            class="form-control"
+                            id="personas"
+                            placeholder="Cantidad de Personas"
+                            required
+                        />
+                        <div id="validacion4">
+                        </div>
+                    </div>
+                    <div class="d-grid mb-2">
+                        <button id="btn-guardar" type="submit" class="btn btn-primary mt-5 w-100 fs-5">
+                            Enviar
+                        </button>
+                        <button id="btn-borrar" type="button" class="btn btn-danger mt-5 w-25">
+                            Borrar
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div id="box2" class="col bg-light p-4 rounded"
+            >
+                <h3 class="text-center fw-bolder mt-4 py-2"> Datos del cliente</h3>
+                <div id="listaDatos" class="container">
+                    
+                   
+                </div>    
+                
+            </div>
+        </div>
+    </div>
+   
+    <script src="./appSim.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
